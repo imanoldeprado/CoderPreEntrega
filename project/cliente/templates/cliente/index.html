@@ -1,17 +1,22 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Cliente
+    {% include 'core/components/titulo1.html' with titulo="Cliente" %}
 {% endblock title %}
 
 {% block content %}
+<div class="row">
     {% for cliente in clientes %}
-        <h2>{{ cliente.nombre }}</h2>
-        <p>{{ cliente.apellido }}</p>
-        <p>{{ cliente.nacimiento }}</p>
-        <p>{{ cliente.pais_origen_id }}</p>
+        <div class="col-md-6">
+            <div class="card my-3">
+                <div class="card-body">
+                    <h2 class="card-title">{{ cliente.nombre }} {{ cliente.apellido }}</h2>
+                    <p class="card-text">Fecha de nacimiento: {{ cliente.nacimiento }}</p>
+                    <p class="card-text">País de origen: {{ cliente.pais_origen_id }}</p>
+                </div>
+            </div>
+        </div>
     {% endfor %}
+</div>
 
-    <a href="{% url 'core:home' %}">Ir a home</a>
-    
 {% endblock content %}
