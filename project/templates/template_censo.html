@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censo</title>
+</head>
+<body>
+    <h1>Personas</h1>
+        {% for clave, valor in persona.items %}
+            <p>{{ clave | upper }}: {{ valor }}</p>
+        {% endfor %}
+
+        <p style="color:coral"> Realizado con render y contexto </p>
+</body>
+</html>

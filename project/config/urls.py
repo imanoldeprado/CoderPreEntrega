@@ -26,4 +26,6 @@ urlpatterns = [
     path("segunda_vista/", views.segunda_vista),
     path("persona/<nombre>/<apellido>", views.persona),
     path("miTemplate/", views.probando_template),
+    path("iterando/", views.template_notas),
+    path("censo/", views.persona_edad),
 ]
