@@ -28,4 +28,6 @@ urlpatterns = [
     path("miTemplate/", views.probando_template),
     path("iterando/", views.template_notas),
     path("censo/", views.persona_edad),
+    #cliente
+    path("cliente/", include("cliente.urls"))
 ]
