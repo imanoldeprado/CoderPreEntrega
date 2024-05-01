@@ -29,5 +29,7 @@ urlpatterns = [
     path("iterando/", views.template_notas),
     path("censo/", views.persona_edad),
     #cliente
-    path("cliente/", include("cliente.urls"))
+    path("cliente/", include("cliente.urls")),
+    #producto
+    path("producto/", include("producto.urls")),
 ]

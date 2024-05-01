@@ -2,13 +2,15 @@
 
 
 {% block title %}
-        <h1>Página inicial</h1>
+        Página inicial
 {% endblock title %}
 
 {% block content %}
     <ul>
         <li>
-            <a href="{% url 'Clase:home' %}">Clase</a>
+            <a href="{% url 'clase:home' %}">Ir a Clase</a>
+            <a href="{% url 'cliente:home'%}">Ir a Clientes</a>
+            <a href="{% url 'producto:home'%}">Ir a Productos</a>
         </li>
     </ul>
 {% endblock content %}
