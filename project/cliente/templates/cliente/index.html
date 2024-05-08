@@ -20,3 +20,18 @@
 </div>
 
 {% endblock content %}
+
+{% block content1 %}
+
+    <div class="fs-3 pb-4 ">
+        <a href="{% url 'cliente:cliente_create' %}">Crear Clientes</a>
+
+    </div>
+
+    <ul>
+        {% for cliente in clientes %}<li>{{ cliente }}</li>{% endfor %}
+    </ul>
+    
+    {# <a href="{% url 'core:home' %}">Ir a home</a> #}
+    
+{% endblock content1 %}
