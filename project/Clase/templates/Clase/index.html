@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Comisiones
+    {% include 'core/components/titulo1.html' with titulo="Clase" %}
 {% endblock title %}
 
 {% block content %}
@@ -9,5 +9,5 @@
         <p>{{ comision.nombre }} | {{ comision.curso }} | {{ comision.profesor }}</p>
     {% endfor %}
 
-    <a href="{% url 'core:home' %}">Ir a home</a>
+    {#<a href="{% url 'core:home' %}">Ir a home</a>#}
 {% endblock content %}
